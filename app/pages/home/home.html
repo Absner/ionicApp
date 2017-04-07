@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar >
+    <ion-title>
+      Harry Potter. List movies.
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngFor="let item of datos" (click)="onclicItem(item.id)" no-lines>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="{{item.image_url}}">
+      </ion-thumbnail>
+      <h4>{{item.name}}</h4>
+      <h5>{{item.release_date}}</h5>
+    </ion-item>
+  </ion-list>
+  <!--<ion-card *ngFor="let item of datos">
+    <img src="{{item.image_url}}" height="300">
+    <ion-card-content>
+      <ion-card-title>{{item.name}}</ion-card-title>
+      <span>{{item.release_date}}</span>
+
+    </ion-card-content>
+  </ion-card>-->
+
+</ion-content>
